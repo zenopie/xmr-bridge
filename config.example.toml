@@ -1,0 +1,33 @@
+# XMR Bridge Node Configuration
+
+# Operator Identity
+# Your Secret Network wallet mnemonic (24 words)
+# This derives your address which IS your participant ID
+# KEEP THIS SECRET! Store in environment variable in production
+operator_mnemonic = "word1 word2 word3 ... word24"
+
+# Alternative: Use encrypted keyfile instead of mnemonic
+# operator_keyfile = "~/.xmr-bridge/key.json"
+
+# Bridge Contract
+bridge_contract_address = "secret1..."  # The coordination contract address on Secret Network
+
+# Monero Settings
+monero_rpc_url = "http://127.0.0.1:18081/json_rpc"  # Monerod RPC endpoint
+# monero_rpc_user = "username"  # Optional: RPC username if authentication is enabled
+# monero_rpc_password = "password"  # Optional: RPC password if authentication is enabled
+monero_network = "mainnet"  # Options: "mainnet", "testnet", "stagenet"
+
+# Secret Network Connection
+secret_network_rpc = "http://localhost:26657"
+secret_network_chain_id = "secret-4"
+
+# Bridge Settings
+min_confirmations = 10  # Monero confirmations before processing deposit
+
+# P2P Network Settings
+listen_address = "/ip4/0.0.0.0/tcp/9000"  # Local listen address
+public_endpoint = "/ip4/YOUR_PUBLIC_IP/tcp/9000"  # Public endpoint for other participants
+
+# Note: Threshold and participant list are fetched from the contract at runtime
+# No need to configure participant_id, threshold, or total_participants

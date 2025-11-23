@@ -1,0 +1,23 @@
+# Core dependencies
+aiohttp>=3.9.0
+pydantic>=2.0.0
+cryptography>=41.0.0
+python-dotenv>=1.0.0
+toml>=0.10.0
+
+# Monero
+monero>=1.1.1
+
+# Secret Network / Cosmos SDK
+secret-sdk>=0.3.0
+bip-utils>=2.9.0  # For BIP39/BIP44 key derivation
+ecdsa>=0.18.0
+bech32>=1.2.0
+
+# Networking
+# Note: py-libp2p may need to be installed separately or use alternative P2P library
+# libp2p>=0.1.0
+
+# FROST threshold signatures
+# Note: May need to use a different FROST implementation for Python
+ed25519>=1.5
