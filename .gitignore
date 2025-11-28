@@ -37,6 +37,11 @@ xmr-bridge.log
 
 # Config
 config.toml
+.env
+
+# Database
+bridge.db
+bridge.db-journal
 
 # OS
 .DS_Store
